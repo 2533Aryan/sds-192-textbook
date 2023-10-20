@@ -41,6 +41,19 @@ babynames |> mutate(total = n/prop)
 ## Part 4
 
 ```{r}
+babynames |> rename(n = total)
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
 
 ```
 
