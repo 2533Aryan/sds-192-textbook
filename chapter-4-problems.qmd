@@ -15,13 +15,18 @@ library(tidyverse)
 ```{r}
 glimpse(babynames)
 ```
+```{r}
+#This makes the Random_subset for problem 1
+Random_subset <- babynames %>%
+  filter(year=="2003" & name=="Bilal" & sex =="M" |year=="1999" & name=="Terria" & sex =="F" |year=="2010" & name=="Naziyah" & sex =="F" |year=="1989" & name=="Shawana" & sex =="F" |year=="1989" & name=="Jessi" & sex =="F" |year=="1928" & name=="Tillman" & sex =="M"|year=="1981" & name=="Leslee" & sex =="F" |year=="1981" & name=="Sherise" & sex =="F"|year=="1920" & name=="Marquerite" & sex =="F" |year=="1941" & name=="Lorraine" & sex =="M") 
+```
 
 # Problem 1
 
 ## Part 1
 
 ```{r}
-babynames |> select(year, sex, name, n) |>
+Random_subset |> select(year, sex, name, n) |>
   filter(n>40) |>
   filter(n<85)
 ```
@@ -29,24 +34,21 @@ babynames |> select(year, sex, name, n) |>
 ## Part 2
 
 ```{r}
-babynames |> filter(nchar(name) == 6)
+Random_subset |> filter(nchar(name) == 6)
 ```
 
 ## Part 3
 
 ```{r}
-babynames |> mutate(total = n/prop)
+Random_subset |> mutate(total = n/prop)
 ```
 
 ## Part 4
 
 ```{r}
-babynames |> rename(total = n)
-
-```
-
-```{r}
-babynames |> summarize(n_distinct(year))
+babynames |> rename(total = n) |>
+  select(year, total) |>
+  summarize(n_distinct(year))
 ```
 
 ```{r}
