@@ -4,7 +4,27 @@ format: html
 editor: visual
 ---
 
+# 4.4 Exercises
+
+```{r}
+#install.packages("babynames")
+library(babynames)
+library(tidyverse)
+```
+
+```{r}
+glimpse(babynames)
+```
+
+# Problem 1
+
+```{r}
+babynames |> select(year, sex, name, n) |>
+  filter(n>40) |>
+  filter(n<85)
+```
+
 ```{r}
 
-
 ```
+
