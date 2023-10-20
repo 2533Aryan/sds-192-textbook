@@ -18,13 +18,29 @@ glimpse(babynames)
 
 # Problem 1
 
+## Part 1
+
 ```{r}
 babynames |> select(year, sex, name, n) |>
   filter(n>40) |>
   filter(n<85)
 ```
 
+## Part 2
+
+```{r}
+babynames |> filter(nchar(name) == 6)
+```
+
+
 ```{r}
 
 ```
 
+```{r}
+
+```
+
+```{r}
+
+```
