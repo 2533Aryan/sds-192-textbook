@@ -51,9 +51,8 @@ Random_subset |> mutate(total = n/prop) |>
 ## Part 4
 
 ```{r}
-babynames |> rename(total = n) |>
-  select(year, total) |>
-  summarize(n_distinct(year))
+Random_subset |> rename(total = n) |>
+  distinct(year)
 ```
 
 ```{r}
