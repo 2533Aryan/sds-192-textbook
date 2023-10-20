@@ -32,10 +32,13 @@ babynames |> select(year, sex, name, n) |>
 babynames |> filter(nchar(name) == 6)
 ```
 
+## Part 3
 
 ```{r}
-
+babynames |> mutate(total = n/prop)
 ```
+
+## Part 4
 
 ```{r}
 
