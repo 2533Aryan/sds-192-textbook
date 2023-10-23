@@ -56,11 +56,25 @@ Random_subset |> rename(total = n) |>
 ```
 
 ```{r}
-
+#library(tidyr)
+??pivot_wider
 ```
 
 ```{r}
-
+library(tidyverse)
+library(mdsr)
+library(googlesheets4)
+gs4_deauth()
+hiv_key <- "1kWH_xdJDM4SMfT_Kzpkk-1yuxWChfurZuWYjfmv51EA"
+hiv <- read_sheet(hiv_key) |>
+  rename(Country = 1) |>
+  filter(
+    Country %in% c("United States", "France", "South Africa")
+  ) |>
+  select(Country, `1979`, `1989`, `1999`, `2009`) |>
+  unnest(cols = c(`2009`)) |>
+  mutate(across(matches("[0-9]"), as.double))
+hiv
 ```
 
 ```{r}
