@@ -110,7 +110,7 @@ table4a
 table4a |>
   pivot_longer(cols = !country,
                names_to = "year",
-               values_to = "per")
+               values_to = "cases")
 ```
 
 ```{r}
