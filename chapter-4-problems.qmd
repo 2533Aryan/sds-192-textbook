@@ -101,3 +101,22 @@ Names |>
               values_from = "total")
 ```
 
+```{r}
+table4a
+
+```
+
+```{r}
+table4a |>
+  pivot_longer(cols = !country,
+               names_to = "year",
+               values_to = "per")
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
