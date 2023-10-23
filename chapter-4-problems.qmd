@@ -76,7 +76,28 @@ hiv <- read_sheet(hiv_key) |>
   mutate(across(matches("[0-9]"), as.double))
 hiv
 ```
+```{r}
+hiv |>
+  pivot_longer(cols = !Country, 
+               names_to = "Year", 
+               values_to = "Prct_hiv")
+```
+
+```{r}
+library(babynames)
+Names <- babynames |>
+     filter(name %in% c("Sue", "Robin", "Leslie")) |>
+     group_by(name, sex) |>
+     summarize(total = sum(n))
+
+Names
+```
+
 
 ```{r}
 
+Names |>
+  pivot_wider(names_from = "sex",
+              values_from = "total")
 ```
+
