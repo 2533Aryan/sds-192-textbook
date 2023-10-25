@@ -26,12 +26,19 @@ head(lakers_date, 3)
 ```
 
 ```{r}
+lakers_time <- ms(lakers$time)
+head(lakers_time)S
 
 ```
+
+# Add time
 
 ```{r}
-
+lakers$date[1]
+lakers$date[1] + days(x=12)
 ```
+
+# Tidyr
 
 ```{r}
 
