@@ -17,7 +17,12 @@ head(lakers$date,3)
 ```
 
 ```{r}
+# Let's make this into a time object.
+lakers$date <-ymd(lakers$date)
 
+lakers_date <- lakers |>
+  select(date)
+head(lakers_date, 3)
 ```
 
 ```{r}
