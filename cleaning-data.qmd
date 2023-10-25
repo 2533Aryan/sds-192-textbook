@@ -91,9 +91,28 @@ glimpse(yrbss$helmet_12m)
 ## Replace strings
 
 ```{r}
+head(yrbss$hours_tv_per_school_day)
+```
+
+```{r}
+yrbss$hours_tv_per_school_day<- str_replace_all(
+  string = yrbss$hours_tv_per_school_day,
+  pattern = c(
+    "\\+" = "" , 
+    "\\<" = "",
+    "do not watch" = NA_character_)
+)
+
+yrbss$hours_tv_per_school_day
+```
+
+```{r}
 
 ```
 
+```{r}
+
+```
 
 ```{r}
 
