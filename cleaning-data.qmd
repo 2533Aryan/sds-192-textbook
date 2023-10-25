@@ -114,6 +114,8 @@ billboard
 ```
 
 ```{r}
+billboard %>%
+  pivot_longer(!c(artist, track, date.entered), names_to = "week", values_to = "ranking")
 
 ```
 
