@@ -85,13 +85,15 @@ glimpse(yrbss)
 ```{r}
 yrbss <- yrbss |>
   mutate(helmet_12m = na_if(helmet_12m, "did not ride" ))
-yrbss$helmet_12m
+glimpse(yrbss$helmet_12m)
 
 ```
+## Replace strings
 
 ```{r}
-yrbss$helmet_12m
+
 ```
+
 
 ```{r}
 
