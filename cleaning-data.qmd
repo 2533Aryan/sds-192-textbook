@@ -52,13 +52,22 @@ lakers_date |>
 ```
 
 ## Unite
+
 ```{r}
+lakers_types <- lakers |>
+  select(type,x,y)
+lakers_types 
 
 ```
 
 ```{r}
+lakers_types |>
+  drop_na() |>
+  head(3)
 
 ```
+
+## Setting NA
 
 ```{r}
 
