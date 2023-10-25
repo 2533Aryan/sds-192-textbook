@@ -100,9 +100,10 @@ yrbss$hours_tv_per_school_day<- str_replace_all(
   pattern = c(
     "\\+" = "" , 
     "\\<" = "",
-    "do not watch" = NA_character_)
+    "do not watch" = 0)
 )
 
+yrbss$hours_tv_per_school_day <- as.numeric(yrbss$hours_tv_per_school_day)
 yrbss$hours_tv_per_school_day
 ```
 
