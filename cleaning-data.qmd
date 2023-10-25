@@ -70,5 +70,22 @@ lakers_types |>
 ## Setting NA
 
 ```{r}
+library(openintro)
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
 
 ```
