@@ -40,6 +40,24 @@ lakers$date[1] + days(x=12)
 
 # Tidyr
 
+## Separate
+
+```{r}
+lakers$player |> separate_wider_delim(cols = player,
+                                    delim = " ",
+                                    names = c("First", "Last"))
+
+head(lakers$player)
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
 ```{r}
 
 ```
