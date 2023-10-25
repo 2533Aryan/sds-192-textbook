@@ -1,0 +1,10 @@
+---
+title: "cleaning-data"
+author: "Aryan Raval"
+format: html
+editor: visual
+---
+
+```{r}
+1 + 1
+```
