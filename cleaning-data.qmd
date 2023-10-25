@@ -43,13 +43,15 @@ lakers$date[1] + days(x=12)
 ## Separate
 
 ```{r}
-lakers$player |> separate_wider_delim(cols = player,
-                                    delim = " ",
-                                    names = c("First", "Last"))
-
-head(lakers$player)
+lakers_date |>
+  separate_wider_delim(
+    cols = date, 
+    delim = "-", 
+    names = c("year","month","day") )    |>
+  head(3)
 ```
 
+## Unite
 ```{r}
 
 ```
