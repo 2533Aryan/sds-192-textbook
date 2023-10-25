@@ -75,15 +75,22 @@ library(openintro)
 ```
 
 ```{r}
+yrbss <- yrbss |>
+  mutate(text_while_driving_30d = na_if(text_while_driving_30d, "did not drive" ))
+glimpse(yrbss)
+
+```
+
+
+```{r}
+yrbss <- yrbss |>
+  mutate(helmet_12m = na_if(helmet_12m, "did not ride" ))
+yrbss$helmet_12m
 
 ```
 
 ```{r}
-
-```
-
-```{r}
-
+yrbss$helmet_12m
 ```
 
 ```{r}
